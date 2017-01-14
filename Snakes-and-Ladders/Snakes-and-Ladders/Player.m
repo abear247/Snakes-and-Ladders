@@ -14,7 +14,18 @@
     self = [super init];
     if (self){
         _currentSquare = 0;
-        _gameLogic = @{@(4) : @(14), @(9) : @(31), @(20) : @(38), @(28) : (@84), @(40) : @(59), @(51) : @(67), @(63) : @(81), @(17) : @(7), @(89) : @(26), @(64) : @(60), @(95) : @(75), @(99) : @(78)};
+        _gameLogic = @{@(4) : @(14),
+                       @(9) : @(31),
+                       @(20) : @(38),
+                       @(28) : (@84),
+                       @(40) : @(59),
+                       @(51) : @(67),
+                       @(63) : @(81),
+                       @(17) : @(7),
+                       @(89) : @(26),
+                       @(64) : @(60),
+                       @(95) : @(75),
+                       @(99) : @(78)};
     }
     return self;
 }
@@ -25,16 +36,14 @@
     BOOL hitSpecial = NO;
     NSLog(@"you rolled a %d", roll);
     NSNumber *square = [NSNumber numberWithInt:self.currentSquare];
-    for (NSNumber *special in self.gameLogic){
-        if ([special isEqualToNumber:square]){
+    if ([self.gameLogic objectForKey:square]){
             int firstValue = self.currentSquare;
-            self.currentSquare = [[self.gameLogic objectForKey:special] intValue];
+            self.currentSquare = [[self.gameLogic objectForKey:square] intValue];
             if (self.currentSquare > firstValue)
                 NSLog(@"Stairway to heaven!, you jumped from %d to %d",firstValue, self.currentSquare);
             else
                 NSLog(@"Slippery snakes you slid from %d to %d",firstValue, self.currentSquare);
             hitSpecial = YES;
-        }
     }
     
     if (!hitSpecial){

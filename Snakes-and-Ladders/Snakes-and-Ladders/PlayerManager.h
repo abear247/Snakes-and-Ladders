@@ -1,5 +1,5 @@
 //
-//  Player.h
+//  PlayerManager.h
 //  Snakes-and-Ladders
 //
 //  Created by Alex Bearinger on 2017-01-14.
@@ -8,13 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Player : NSObject
+@interface PlayerManager : NSObject
 
+@property NSMutableArray *players;
 
-@property int currentSquare;
-@property NSDictionary *gameLogic;
-@property NSString *name;
--(void)roll;
-
+-(void)createPlayers:(int)players;
 
 @end

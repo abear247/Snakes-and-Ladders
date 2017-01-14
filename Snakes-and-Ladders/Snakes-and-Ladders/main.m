@@ -8,12 +8,22 @@
 
 #import <Foundation/Foundation.h>
 #import "InputCollector.h"
-#import "Player.h"
+#import "PlayerManager.h"
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Player *player = [Player new];
         InputCollector *inputCollector = [InputCollector new];
+        PlayerManager *manager = [PlayerManager new];
         BOOL keepPlaying = YES;
+        while(keepPlaying){
+            int playerNumber = [[inputCollector inputFromPrompt:@"Enter number of players: "] intValue];
+            [manager createPlayers:playerNumber];
+            if(manager.players.count > 0)
+                keepPlaying = NO;
+            else
+                NSLog(@"Enter valid number");
+        }
+        keepPlaying = YES;
         while(keepPlaying){
             NSString *input = [inputCollector inputFromPrompt:@"roll: "];
             if([input isEqualToString:@"roll"])

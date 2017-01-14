@@ -10,6 +10,7 @@
 		C80664E31E2AB05100860419 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C80664E21E2AB05100860419 /* main.m */; };
 		C80664EB1E2AB08E00860419 /* InputCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = C80664EA1E2AB08E00860419 /* InputCollector.m */; };
 		C80664EE1E2AB10E00860419 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = C80664ED1E2AB10E00860419 /* Player.m */; };
+		C80664F11E2ACDAC00860419 /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C80664F01E2ACDAC00860419 /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		C80664EA1E2AB08E00860419 /* InputCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputCollector.m; sourceTree = "<group>"; };
 		C80664EC1E2AB10E00860419 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		C80664ED1E2AB10E00860419 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		C80664EF1E2ACDAC00860419 /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		C80664F01E2ACDAC00860419 /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				C80664EA1E2AB08E00860419 /* InputCollector.m */,
 				C80664EC1E2AB10E00860419 /* Player.h */,
 				C80664ED1E2AB10E00860419 /* Player.m */,
+				C80664EF1E2ACDAC00860419 /* PlayerManager.h */,
+				C80664F01E2ACDAC00860419 /* PlayerManager.m */,
 			);
 			path = "Snakes-and-Ladders";
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			files = (
 				C80664EB1E2AB08E00860419 /* InputCollector.m in Sources */,
 				C80664EE1E2AB10E00860419 /* Player.m in Sources */,
+				C80664F11E2ACDAC00860419 /* PlayerManager.m in Sources */,
 				C80664E31E2AB05100860419 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
